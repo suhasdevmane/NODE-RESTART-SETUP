@@ -1,0 +1,98 @@
+2024-11-19 21:46:53,079 - This is an info log
+2024-11-19 21:46:53,079 - This is an error log
+2024-11-19 21:46:53,094 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 21:46:53,097 - Added job "main" to job store "default"
+2024-11-19 21:46:53,098 - Scheduler started
+2024-11-19 21:46:53,518 - This is an info log
+2024-11-19 21:46:53,518 - This is an error log
+2024-11-19 21:46:53,564 - This is an info log
+2024-11-19 21:46:53,565 - This is an error log
+2024-11-19 21:46:53,589 - This is an info log
+2024-11-19 21:46:53,589 - This is an error log
+2024-11-19 21:49:49,696 - This is an info log
+2024-11-19 21:49:49,697 - This is an error log
+2024-11-19 21:49:49,705 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 21:49:49,707 - Added job "main" to job store "default"
+2024-11-19 21:49:49,707 - Scheduler started
+2024-11-19 21:49:50,037 - This is an info log
+2024-11-19 21:49:50,037 - This is an error log
+2024-11-19 21:49:50,083 - This is an info log
+2024-11-19 21:49:50,083 - This is an error log
+2024-11-19 21:49:50,170 - This is an info log
+2024-11-19 21:49:50,171 - This is an error log
+2024-11-19 21:50:12,110 - This is an info log
+2024-11-19 21:50:12,111 - This is an error log
+2024-11-19 21:50:12,118 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 21:50:12,120 - Added job "main" to job store "default"
+2024-11-19 21:50:12,121 - Scheduler started
+2024-11-19 21:50:12,578 - This is an info log
+2024-11-19 21:50:12,578 - This is an error log
+2024-11-19 21:50:12,613 - This is an info log
+2024-11-19 21:50:12,621 - This is an error log
+2024-11-19 21:50:12,676 - This is an info log
+2024-11-19 21:50:12,676 - This is an error log
+2024-11-19 21:54:19,176 - This is an info log
+2024-11-19 21:54:19,177 - This is an error log
+2024-11-19 21:54:19,183 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 21:54:19,186 - Added job "main" to job store "default"
+2024-11-19 21:54:19,186 - Scheduler started
+2024-11-19 21:54:19,815 - This is an info log
+2024-11-19 21:54:19,815 - This is an error log
+2024-11-19 21:54:19,827 - This is an info log
+2024-11-19 21:54:19,827 - This is an info log
+2024-11-19 21:54:19,827 - This is an error log
+2024-11-19 21:54:19,828 - This is an error log
+2024-11-19 21:57:15,642 - This is an info log
+2024-11-19 21:57:15,643 - This is an error log
+2024-11-19 21:57:15,665 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 21:57:15,668 - Added job "main" to job store "default"
+2024-11-19 21:57:15,670 - Scheduler started
+2024-11-19 21:57:16,408 - This is an info log
+2024-11-19 21:57:16,408 - This is an error log
+2024-11-19 21:57:16,409 - This is an info log
+2024-11-19 21:57:16,410 - This is an error log
+2024-11-19 21:57:16,510 - This is an info log
+2024-11-19 21:57:16,510 - This is an error log
+2024-11-19 21:58:06,620 - This is an info log
+2024-11-19 21:58:06,621 - This is an error log
+2024-11-19 21:58:06,629 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 21:58:06,630 - Added job "main" to job store "default"
+2024-11-19 21:58:06,631 - Scheduler started
+2024-11-19 21:58:07,018 - This is an info log
+2024-11-19 21:58:07,018 - This is an error log
+2024-11-19 21:58:07,071 - This is an info log
+2024-11-19 21:58:07,071 - This is an error log
+2024-11-19 21:58:07,142 - This is an info log
+2024-11-19 21:58:07,142 - This is an error log
+2024-11-19 22:02:35,918 - This is an info log
+2024-11-19 22:02:35,919 - This is an error log
+2024-11-19 22:02:35,925 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 22:02:35,925 - Added job "main" to job store "default"
+2024-11-19 22:02:35,926 - Scheduler started
+2024-11-19 22:02:36,259 - This is an info log
+2024-11-19 22:02:36,259 - This is an error log
+2024-11-19 22:02:36,306 - This is an info log
+2024-11-19 22:02:36,306 - This is an error log
+2024-11-19 22:02:36,361 - This is an info log
+2024-11-19 22:02:36,361 - This is an error log
+2024-11-19 22:06:33,145 - This is an info log
+2024-11-19 22:06:33,145 - This is an error log
+2024-11-19 22:06:33,155 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 22:06:33,158 - Added job "main" to job store "default"
+2024-11-19 22:06:33,160 - Scheduler started
+2024-11-19 22:06:33,703 - This is an info log
+2024-11-19 22:06:33,704 - This is an error log
+2024-11-19 22:06:33,793 - This is an info log
+2024-11-19 22:06:33,794 - This is an error log
+2024-11-19 22:06:33,801 - This is an info log
+2024-11-19 22:06:33,801 - This is an error log
+2024-11-19 22:07:03,692 - 10.10.129.71 is restarted
+2024-11-19 22:08:04,071 - 10.10.129.75 is restarted
+2024-11-19 22:09:34,671 - 10.10.129.71 is restarted
+2024-11-19 22:14:56,659 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 22:14:56,662 - Added job "main" to job store "default"
+2024-11-19 22:14:56,662 - Scheduler started
+2024-11-19 22:15:27,257 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
+2024-11-19 22:16:27,648 - Device 83456b70-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.75 is restarted
+2024-11-19 22:17:58,211 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
+2024-11-19 22:18:58,592 - Device 83456b70-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.75 is restarted

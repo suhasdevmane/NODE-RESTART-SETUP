@@ -1,0 +1,66 @@
+old ip-
+ssh suhas@10.98.44.223 -p2222
+ssh suhas@10.162.40.28 -p2222
+
+new ip-
+ssh suhas@10.0.241.192
+youtubeaccount
+
+new ip 2
+ssh suhas@10.98.45.43 -p2222
+youtubeaccount
+
+docker run -it --rm --name suhas-gpu  -v $(pwd):/tf/notebooks -p 8877:8888 tensorflow/tensorflow:latest-gpu-jupyter
+
+http://10.98.44.223:8877/
+
+
+docker run -it --rm --name suhas-gpu -v $(pwd):/tf/notebooks -p 8877:8888 tensorflow/tensorflow:latest-gpu-jupyter
+
+docker run -it --rm --name suhas-gpu -v $(pwd):/tf/notebooks -p 8877:8888 suhas-tf-gpu
+
+a391544bd869dfb87fb5ebc0e0c2e2261998427c1e1156e4
+
+see memory utilization 
+htop
+
+docker commit CONTAINER_ID suhas-tf-gpu
+docker save -o suhas-tf-gpu.tar suhas-tf-gpu
+docker load -i suhas-tf-gpu.tar
+
+
+docker run -it --rm --name suhas-gpu -v $(pwd):/tf/notebooks -p 8877:8888 tensorflow/tensorflow:latest-jupyter
+
+http://9faba9507e52:8888/?token=37fce51523aca10c09cbd84d94cba0585be5b760945834e6
+c8eb8c57bcf9f0108e497cbe9a30bf3d70b0b6c3f890b5ef
+b7c9834e124e68ed84d2138a4e0569129e800f0e2d01aff4
+docker run -it --rm --name suhas-gpu -v $(pwd):/tf/notebooks  -p 8877:8888 t5-tensorflow-suhas 
+
+docker pull selenium/standalone-chrome
+docker run -d -p 4444:4444 --name chrome-selenium selenium/standalone-chrome
+
+
+docker run --mount src=$(pwd),target=/tf/notebooks,type=bind --gpus all -it --rm -p 8877:8888 --ip="0.0.0.0" t5-tensorflow-suhas
+
+
+
+
+wget wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1iyJBLmcUCToU1eWIKET7g16KgwPNsAdb' -O node-restart-setup.zip
+
+suhas@DCP-IoTGarage:~/node-restart-setup$ docker network create my-node-restart-network
+
+docker build -t node_restarter ./tapo-restart-api/
+
+
+docker run -d --name node_restarter --hostname node_restarter --network my-node-restart-network -p 5000:5000 -e TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com -e TB_API_PASSWORD=Suhas@551993 node_restarter
+
+
+docker build -t ip_sender ./node-restart/
+docker run -d --name ip_sender --hostname ip_sender --network my-node-restart-network -p 5001:5001 -v "$(pwd)/node-restart:/app" ip_sender
+
+
+docker run -d --name ngrok --network my-node-restart-network -e NGROK_AUTHTOKEN=2d0cV2BwntFaSKtLBY3cSUm9b3k_3w5VVJhL6rZRwUyvnvP16 -e NGROK_REGION=us -p 4040:4040 ngrok/ngrok:latest http --region=us --domain=separately-champion-bulldog.ngrok-free.app ip_sender:5001
+
+check- 
+
+separately-champion-bulldog.ngrok-free.app
