@@ -45,7 +45,7 @@ docker run --mount src=$(pwd),target=/tf/notebooks,type=bind --gpus all -it --rm
 
 
 
-wget wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1iyJBLmcUCToU1eWIKET7g16KgwPNsAdb' -O node-restart-setup.zip
+GIT CLONE https://github.com/suhasdevmane/NODE-RESTART-SETUP.git
 
 suhas@DCP-IoTGarage:~/node-restart-setup$ docker network create my-node-restart-network
 

@@ -21,5 +21,5 @@ COPY requirements.txt .
 # Install any needed dependencies specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Run the script.py file when the container launches
-CMD ["python", "script.py"]
+# Run the app.py file when the container launches
+CMD ["python", "app.py"]

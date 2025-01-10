@@ -10,19 +10,19 @@ This project uses Docker Compose to deploy three services:
 ## Services
 
 ### 1. `node_restarter`
-This service is responsible for restarting nodes via a REST API. It listens on port `5000`.
+This service is responsible for restarting nodes via a REST API. It listens on port `6000`.
 
 - **Build context**: `./tapo-restart-api/`
-- **Exposed port**: `5000:5000`
+- **Exposed port**: `6000:6000`
 - **Environment Variables**:
   - `TB_API_USERNAME`: Your ThingsBoard API username.
   - `TB_API_PASSWORD`: Your ThingsBoard API password.
 
 ### 2. `ip_sender`
-This service sends the IP address to an endpoint and listens on port `5001`.
+This service sends the IP address to an endpoint and listens on port `6001`.
 
 - **Build context**: `./node-restart/`
-- **Exposed port**: `5001:5001`
+- **Exposed port**: `6001:6001`
 - **Volumes**:
   - Maps the `./node-restart/` directory to `/app` inside the container.
 
@@ -65,8 +65,8 @@ This command will:
 - Start the `ngrok-node-restart-setup` service.
 
 ### 3. Access the Services
-- `node_restarter`: Available at `http://localhost:5000`.
-- `ip_sender`: Available at `http://localhost:5001`.
+- `node_restarter`: Available at `http://localhost:6000`.
+- `ip_sender`: Available at `http://localhost:6001`.
 - **Ngrok**: You can access the Ngrok admin interface at `http://localhost:4042`, and the exposed endpoint at `http://separately-champion-bulldog.ngrok-free.app`.
 
 ## Environment Variables
