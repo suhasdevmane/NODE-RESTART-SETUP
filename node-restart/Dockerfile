@@ -22,4 +22,4 @@ COPY requirements.txt .
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 # Run the app.py file when the container launches
-CMD ["python", "app.py"]
+CMD ["python", "script.py"]

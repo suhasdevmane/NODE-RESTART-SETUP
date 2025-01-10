@@ -45,21 +45,19 @@ docker run --mount src=$(pwd),target=/tf/notebooks,type=bind --gpus all -it --rm
 
 
 
-GIT CLONE https://github.com/suhasdevmane/NODE-RESTART-SETUP.git
+git clone https://github.com/suhasdevmane/NODE-RESTART-SETUP.git
 
-suhas@DCP-IoTGarage:~/node-restart-setup$ docker network create my-node-restart-network
+docker network create my-node-restart-network
 
 docker build -t node_restarter ./tapo-restart-api/
 
-
-docker run -d --name node_restarter --hostname node_restarter --network my-node-restart-network -p 5000:5000 -e TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com -e TB_API_PASSWORD=Suhas@551993 node_restarter
-
+docker run -d --name node_restarter_suhas --hostname node_restarter --network my-node-restart-network -p 6000:6000 -e TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com -e TB_API_PASSWORD=Suhas@551993 node_restarter
 
 docker build -t ip_sender ./node-restart/
-docker run -d --name ip_sender --hostname ip_sender --network my-node-restart-network -p 5001:5001 -v "$(pwd)/node-restart:/app" ip_sender
 
+docker run -d --name ip_sender_suhas --hostname ip_sender --network my-node-restart-network -p 6001:6001 -v "$(pwd)/node-restart:/app" ip_sender
 
-docker run -d --name ngrok --network my-node-restart-network -e NGROK_AUTHTOKEN=2d0cV2BwntFaSKtLBY3cSUm9b3k_3w5VVJhL6rZRwUyvnvP16 -e NGROK_REGION=us -p 4040:4040 ngrok/ngrok:latest http --region=us --domain=separately-champion-bulldog.ngrok-free.app ip_sender:5001
+docker run -d --name ngrok_ip_sender_suhas --network my-node-restart-network -e NGROK_AUTHTOKEN=2d0cV2BwntFaSKtLBY3cSUm9b3k_3w5VVJhL6rZRwUyvnvP16 -e NGROK_REGION=us -p 4042:4040 ngrok/ngrok:latest http --region=us --domain=separately-champion-bulldog.ngrok-free.app ip_sender:6001
 
 check- 
 

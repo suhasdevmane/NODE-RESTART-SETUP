@@ -181,7 +181,7 @@ def run_flask():
         "gunicorn",
         "-b", "0.0.0.0:6001",
         "script:app",
-        "--timeout", "120",
+        "--timeout", "240",
         "--workers", "3"
     ])
 
