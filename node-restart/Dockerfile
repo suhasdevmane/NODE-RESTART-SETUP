@@ -17,7 +17,6 @@ RUN pip install --upgrade pip
 
 COPY requirements.txt .
 
-# RUN pip install -r requirements.txt
 # Install any needed dependencies specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
