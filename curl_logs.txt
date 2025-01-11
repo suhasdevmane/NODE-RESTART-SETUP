@@ -96,3 +96,11 @@
 2024-11-19 22:16:27,648 - Device 83456b70-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.75 is restarted
 2024-11-19 22:17:58,211 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
 2024-11-19 22:18:58,592 - Device 83456b70-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.75 is restarted
+2025-01-11 15:25:25,266 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
+2025-01-11 15:25:56,033 - Device 508d1b60-57eb-11ee-8714-19d56ba0c4fdwith IP address 10.10.129.84 is restarted
+2025-01-11 18:57:37,388 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
+2025-01-11 18:58:08,234 - Device 508d1b60-57eb-11ee-8714-19d56ba0c4fdwith IP address 10.10.129.84 is restarted
+2025-01-11 19:12:42,943 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
+2025-01-11 19:13:13,680 - Device 508d1b60-57eb-11ee-8714-19d56ba0c4fdwith IP address 10.10.129.84 is restarted
+2025-01-11 19:21:49,631 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
+2025-01-11 19:22:20,508 - Device 508d1b60-57eb-11ee-8714-19d56ba0c4fdwith IP address 10.10.129.84 is restarted

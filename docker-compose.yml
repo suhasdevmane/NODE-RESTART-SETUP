@@ -3,14 +3,14 @@ version: '3.3'
 services:
   node_restarter:
     build:
-      context: ./tapo-restart-api/
+      context: ./node_restarter/
       dockerfile: Dockerfile
     ports:
-      - "6000:6000"
+      - "5000:5000"
     environment:
       - TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com
       - TB_API_PASSWORD=Suhas@551993
-    restart: always
+    # restart: always
     hostname: node_restarter
     container_name: node_restarter
     networks:
@@ -18,31 +18,30 @@ services:
 
   ip_sender:
     build: 
-      context: ./node-restart/
+      context: ./ip_sender/
       dockerfile: Dockerfile
     ports:
-      - "6001:6001"
-    volumes:
-      - ./node-restart/:/app
-      - ./node-restart/curl_logs.txt:/app/node-restart/curl_logs.txt
-    restart: always
+      - "5001:5001"
+    volumes: 
+      - ./curl_logs.txt:/app/curl_logs.txt
+    # restart: always
     hostname: ip_sender
     container_name: ip_sender
     networks:
       - my-node-restart-network
 
-  ngrok-node-restart-setup:
-    image: ngrok/ngrok:latest
-    container_name: ngrok-node-restart-setup
-    restart: always
-    networks:
-      - my-node-restart-network # Attach to the same network
-    environment:
-      NGROK_AUTHTOKEN: "2d0cV2BwntFaSKtLBY3cSUm9b3k_3w5VVJhL6rZRwUyvnvP16" # Replace with your token
-      NGROK_REGION: "us"
-    command: http --domain=separately-champion-bulldog.ngrok-free.app ip_sender:6001
-    ports:
-      - "4042:4040" # Expose the Ngrok admin interface on host port 4042
+  # ngrok-node-restart-setup:
+  #   image: ngrok/ngrok:latest
+  #   container_name: ngrok-node-restart-setup
+  #   restart: always
+  #   networks:
+  #     - my-node-restart-network # Attach to the same network
+  #   environment:
+  #     NGROK_AUTHTOKEN: "2d0cV2BwntFaSKtLBY3cSUm9b3k_3w5VVJhL6rZRwUyvnvP16" # Replace with your token
+  #     NGROK_REGION: "us"
+  #   command: http --domain=separately-champion-bulldog.ngrok-free.app ip_sender:5001
+  #   ports:
+  #     - "4042:4040" # Expose the Ngrok admin interface on host port 4042
 
 networks:
   my-node-restart-network:

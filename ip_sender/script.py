@@ -156,8 +156,8 @@ def main():
                 if result["status"] == "inactive":
                     ip_address = result["ip_address"]
                     print( "ip_address value", ip_address)
-                    url3 = "http://node_restarter:6000/device_activity"
-                    # url = "http://localhost:6000/device_activity"
+                    url3 = "http://node_restarter:5000/device_activity"
+                    # url = "http://localhost:5000/device_activity"
                     payload = {
                            "ip_address": ip_address,
                             "device_id" : device_id,
@@ -173,13 +173,15 @@ def main():
                     time.sleep(20)
                     print(f"Sensor node was offline with {ip_address} and restarted")
                     logging.info(f"Device {device_id}with IP address {ip_address} is restarted")
+                    for handler in logging.getLogger().handlers:
+                        handler.flush()
         time.sleep(21600)            
 
 def run_flask():
     # Start the Flask application with Gunicorn
     subprocess.run([
         "gunicorn",
-        "-b", "0.0.0.0:6001",
+        "-b", "0.0.0.0:5001",
         "script:app",
         "--timeout", "120",
         "--workers", "3"

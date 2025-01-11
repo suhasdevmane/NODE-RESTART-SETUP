@@ -14,14 +14,14 @@ unzip main.zip
 
 sudo docker build -t flask-app .
 
-sudo docker run -d -p 6000:6000 -e TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com -e TB_API_PASSWORD=Suhas@551993 --restart always --name flask-container flask-app
+sudo docker run -d -p 5000:5000 -e TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com -e TB_API_PASSWORD=Suhas@551993 --restart always --name flask-container flask-app
 
 docker run hello-world
 
 try command curl
 
-curl -X POST -H "Content-Type: application/json" -d '{"ip_address":"10.10.227.56"}' http://localhost:6000/device_activity
-curl -X POST -H "Content-Type: application/json" -d '{"ip_address":"10.10.227.56"}' http://10.10.252.172:6000/device_activity    # from local network
+curl -X POST -H "Content-Type: application/json" -d '{"ip_address":"10.10.227.56"}' http://localhost:5000/device_activity
+curl -X POST -H "Content-Type: application/json" -d '{"ip_address":"10.10.227.56"}' http://10.10.252.172:5000/device_activity    # from local network
 curl -X POST -H "Content-Type: application/json" -d '{"ip_address":"10.10.227.56"}' https://probable-goshawk-accurately.ngrok-free.app/device_activity    # from local network
 
 curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
@@ -31,11 +31,11 @@ ngrok config add-authtoken 2eKLRXXssXBXCPqMnUy2i0WUSvu_37P3ceiHmbB7Lah5MMdvt
 my ngrok token = 2eKLRXXssXBXCPqMnUy2i0WUSvu_37P3ceiHmbB7Lah5MMdvt
 
 
-ngrok http http://localhost:6000
+ngrok http http://localhost:5000
 or for dynamic domanin name
-sudo docker run --net=host -it -e NGROK_AUTHTOKEN=2eKLRXXssXBXCPqMnUy2i0WUSvu_37P3ceiHmbB7Lah5MMdvt --restart always ngrok/ngrok:latest http http://localhost:6000
+sudo docker run --net=host -it -e NGROK_AUTHTOKEN=2eKLRXXssXBXCPqMnUy2i0WUSvu_37P3ceiHmbB7Lah5MMdvt --restart always ngrok/ngrok:latest http http://localhost:5000
 or for static domain name
-ngrok sudo docker run --net=host -it -e NGROK_AUTHTOKEN=2eKLRXXssXBXCPqMnUy2i0WUSvu_37P3ceiHmbB7Lah5MMdvt --restart always ngrok/ngrok:latest http --domain=probable-goshawk-accurately.ngrok-free.app 6000
+ngrok sudo docker run --net=host -it -e NGROK_AUTHTOKEN=2eKLRXXssXBXCPqMnUy2i0WUSvu_37P3ceiHmbB7Lah5MMdvt --restart always ngrok/ngrok:latest http --domain=probable-goshawk-accurately.ngrok-free.app 5000
 
                                                                                                                                        
 Session Status                online                                                                                                   
@@ -44,7 +44,7 @@ Version                       3.8.0
 Region                        Europe (eu)                                                                                              
 Latency                       41ms                                                                                                     
 Web Interface                 http://127.0.0.1:4040                                                                                    
-Forwarding                    https://4c44-131-251-10-172.ngrok-free.app -> http://localhost:6000                                      
+Forwarding                    https://4c44-131-251-10-172.ngrok-free.app -> http://localhost:5000                                      
                                                                                                                                        
 Connections                   ttl     opn     rt1     rt5     p50     p90                                                              
                               0       0       0.00    0.00    0.00    0.0
@@ -61,12 +61,12 @@ Version                       3.8.0
 Region                        Europe (eu)                                                                            
 Latency                       56ms                                                                                   
 Web Interface                 http://0.0.0.0:4040                                                                    
-Forwarding                    https://e1ba-131-251-10-172.ngrok-free.app -> http://localhost:6000                    
+Forwarding                    https://e1ba-131-251-10-172.ngrok-free.app -> http://localhost:5000                    
                                                                                                                      
 Connections                   ttl     opn     rt1     rt5     p50     p90                                            
                               0       0       0.00    0.00    0.00    0.00    
 
-ngrok http --domain=probable-goshawk-accurately.ngrok-free.app 6000
+ngrok http --domain=probable-goshawk-accurately.ngrok-free.app 5000
 
 
 my static domains                                                                                                                (Ctrl+C to quit)
@@ -79,7 +79,7 @@ Version                       3.8.0
 Region                        Europe (eu)                                                                                               
 Latency                       24ms                                                                                                      
 Web Interface                 http://0.0.0.0:4040                                                                                       
-Forwarding                    https://probable-goshawk-accurately.ngrok-free.app -> http://localhost:6000                               
+Forwarding                    https://probable-goshawk-accurately.ngrok-free.app -> http://localhost:5000                               
                                                                                                                                         
 Connections                   ttl     opn     rt1     rt5     p50     p90                                                               
                               0       0       0.00    0.00    0.00    0.00  
@@ -108,4 +108,4 @@ node-restarter
 1. sudo docker build -t node-restarter .
 
 
-2. sudo docker run -d -p 6001:6001 -v "$(pwd)/curl_logs.txt:/app/curl_logs.txt" --restart always --name node-restarter node-restarter
+2. sudo docker run -d -p 5001:5001 -v "$(pwd)/curl_logs.txt:/app/curl_logs.txt" --restart always --name node-restarter node-restarter
