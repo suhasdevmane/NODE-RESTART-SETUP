@@ -10,7 +10,7 @@ services:
     environment:
       - TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com
       - TB_API_PASSWORD=Suhas@551993
-    # restart: always
+    restart: always
     hostname: node_restarter
     container_name: node_restarter
     networks:
@@ -24,7 +24,8 @@ services:
       - "6001:6001"
     volumes:
       - ./node-restart/:/app
-    # restart: always
+      - ./node-restart/curl_logs.txt:/app/node-restart/curl_logs.txt
+    restart: always
     hostname: ip_sender
     container_name: ip_sender
     networks:
