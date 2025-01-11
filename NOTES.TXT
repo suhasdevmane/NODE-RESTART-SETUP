@@ -57,16 +57,22 @@ cd NODE-RESTART-SETUP
 docker build -t node_restarter ./node_restarter/
 2) run image
 docker run -d --name node_restarter_suhas --hostname node_restarter --network my-node-restart-network -p 6000:6000 -e TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com -e TB_API_PASSWORD=Suhas@551993 --restart always node_restarter
+
+wait for 1 minute before starting ip_sender
+
 1) build image
 docker build -t ip_sender ./ip_sender/
 2) run image
 docker run -d --name ip_sender_suhas --hostname ip_sender --network my-node-restart-network -p 6001:6001 -v "$(pwd)/curl_logs.txt:/app/curl_logs.txt"  --restart always ip_sender
 
 
+#FOR LOCAL Pc
+docker-compose build
+docker-compose up node_restarter
 
+(~wait a minute before running second container)
 
-
-
+docker-compose up ip_sender
 
 
 

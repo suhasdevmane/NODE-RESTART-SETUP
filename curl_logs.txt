@@ -104,3 +104,5 @@
 2025-01-11 19:13:13,680 - Device 508d1b60-57eb-11ee-8714-19d56ba0c4fdwith IP address 10.10.129.84 is restarted
 2025-01-11 19:21:49,631 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
 2025-01-11 19:22:20,508 - Device 508d1b60-57eb-11ee-8714-19d56ba0c4fdwith IP address 10.10.129.84 is restarted
+2025-01-11 19:45:59,682 - Device 70ad22a0-b82c-11ed-b196-bb47e24272bcwith IP address 10.10.129.71 is restarted
+2025-01-11 19:46:30,485 - Device 508d1b60-57eb-11ee-8714-19d56ba0c4fdwith IP address 10.10.129.84 is restarted

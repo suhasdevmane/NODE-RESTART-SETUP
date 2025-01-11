@@ -156,8 +156,8 @@ def main():
                 if result["status"] == "inactive":
                     ip_address = result["ip_address"]
                     print( "ip_address value", ip_address)
-                    url3 = "http://node_restarter:5000/device_activity"
-                    # url = "http://localhost:5000/device_activity"
+                    url3 = "http://node_restarter:6001/device_activity"
+                    # url = "http://localhost:6001/device_activity"
                     payload = {
                            "ip_address": ip_address,
                             "device_id" : device_id,
@@ -181,7 +181,7 @@ def run_flask():
     # Start the Flask application with Gunicorn
     subprocess.run([
         "gunicorn",
-        "-b", "0.0.0.0:5001",
+        "-b", "0.0.0.0:6001",
         "script:app",
         "--timeout", "120",
         "--workers", "3"

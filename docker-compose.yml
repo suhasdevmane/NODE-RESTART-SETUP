@@ -5,8 +5,10 @@ services:
     build:
       context: ./node_restarter/
       dockerfile: Dockerfile
+    depends_on:
+      - ip_sender
     ports:
-      - "5000:5000"
+      - "6000:6000"
     environment:
       - TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com
       - TB_API_PASSWORD=Suhas@551993
@@ -21,7 +23,7 @@ services:
       context: ./ip_sender/
       dockerfile: Dockerfile
     ports:
-      - "5001:5001"
+      - "6001:6001"
     volumes: 
       - ./curl_logs.txt:/app/curl_logs.txt
     # restart: always
@@ -39,7 +41,7 @@ services:
   #   environment:
   #     NGROK_AUTHTOKEN: "2d0cV2BwntFaSKtLBY3cSUm9b3k_3w5VVJhL6rZRwUyvnvP16" # Replace with your token
   #     NGROK_REGION: "us"
-  #   command: http --domain=separately-champion-bulldog.ngrok-free.app ip_sender:5001
+  #   command: http --domain=separately-champion-bulldog.ngrok-free.app ip_sender:6001
   #   ports:
   #     - "4042:4040" # Expose the Ngrok admin interface on host port 4042
 
