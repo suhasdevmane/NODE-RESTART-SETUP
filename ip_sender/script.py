@@ -156,8 +156,8 @@ def main():
                 if result["status"] == "inactive":
                     ip_address = result["ip_address"]
                     print( "ip_address value", ip_address)
-                    url3 = "http://node_restarter:6001/device_activity"
-                    # url = "http://localhost:6001/device_activity"
+                    url3 = "http://node_restarter:6002"
+                    # url3 = "http://localhost:6002"
                     payload = {
                            "ip_address": ip_address,
                             "device_id" : device_id,
@@ -168,13 +168,11 @@ def main():
                     headers = {
                             "Content-Type": "application/json"
                         }  # Assuming you have headers defined somewhere
-                    response = requests.post(url3, json=payload, headers=headers)
+                    response = requests.post(url3, json=payload, headers=headers, timeout=60)
                     print("Response from server:", response.text)
                     time.sleep(20)
                     print(f"Sensor node was offline with {ip_address} and restarted")
                     logging.info(f"Device {device_id}with IP address {ip_address} is restarted")
-                    for handler in logging.getLogger().handlers:
-                        handler.flush()
         time.sleep(21600)            
 
 def run_flask():

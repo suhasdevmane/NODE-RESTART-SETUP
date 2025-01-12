@@ -14,8 +14,8 @@ async def restart_device(ip_address):
     await device.on()
     print(f"Device at IP address {ip_address} restarted")
 
-@app.route('/device_activity', methods=['POST'])
-def device_activity():
+@app.route('/', methods=['POST'])
+def main():
     data = request.json
     print("Received data:", data)
     
@@ -35,4 +35,4 @@ def device_activity():
         return jsonify({'message': f'Device {device_id} is active'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=6002)

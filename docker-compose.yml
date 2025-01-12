@@ -5,10 +5,8 @@ services:
     build:
       context: ./node_restarter/
       dockerfile: Dockerfile
-    depends_on:
-      - ip_sender
     ports:
-      - "6000:6000"
+      - "6002:6002"
     environment:
       - TB_API_USERNAME=suhasdevmanecardiffuni@gmail.com
       - TB_API_PASSWORD=Suhas@551993
@@ -22,6 +20,8 @@ services:
     build: 
       context: ./ip_sender/
       dockerfile: Dockerfile
+    depends_on:
+      - node_restarter
     ports:
       - "6001:6001"
     volumes: 
