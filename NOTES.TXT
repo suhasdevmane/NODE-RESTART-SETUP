@@ -68,8 +68,6 @@ docker run --name ip_sender_suhas --hostname ip_sender --network my-node-restart
 or windows
 docker run --name ip_sender_suhas --hostname ip_sender --network my-node-restart-network -p 6001:6001 -v "C:/_PHD_/Github/NODE-RESTART-SETUP/curl_logs.txt:/app/curl_logs.txt" --restart always ip_sender
 
-
-
 #FOR LOCAL Pc
 docker-compose build
 docker-compose up node_restarter
